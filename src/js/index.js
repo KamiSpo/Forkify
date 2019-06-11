@@ -1,4 +1,6 @@
-import num from './test';
+import Search from './models/Search';
 
-console.log(`I imported ${num} from another module`);
 
+const search = new Search('pizza');
+search.getResults();
+   
