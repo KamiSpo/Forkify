@@ -19,6 +19,8 @@ import {elements} from './views/base';
          // New serach object and add to state
          state.search = new Search(query);
          // Prepare UI for results
+         searchView.clearInput();
+         searchView.clearResults();
 
          // Search for recipes
          await state.search.getResults();
