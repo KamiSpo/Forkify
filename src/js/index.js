@@ -72,6 +72,11 @@ import {elements, renderLoader, clearLoader} from './views/base';
          recipeView.clearRecipe(); 
          renderLoader(elements.recipe);
 
+         // Highlight selected recipe
+         if (state.search) {
+            searchView.highlightSelected(id);
+         }
+          
          // Create a new recipe object
         state.recipe = new Recipe(id);
         
