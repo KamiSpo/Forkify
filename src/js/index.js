@@ -16,7 +16,6 @@ import {elements, renderLoader, clearLoader} from './views/base';
  */
 
  const state = {};
- window.state = state;
 
  /**
   * SEARCH CONTROLLER
@@ -126,8 +125,7 @@ import {elements, renderLoader, clearLoader} from './views/base';
  // Handle delete and update list item events
  elements.shopping.addEventListener('click', e => {
      const id = e.target.closest('.shopping__item').dataset.itemid
-     console.log(id)
-
+ 
      // Handle the delete button
      if (e.target.matches('.shopping__delete, .shopping__delete *')) {
          // Delete from state
@@ -216,7 +214,5 @@ elements.recipe.addEventListener('click', e => {
     }
 })
 
-
-window.l = new List();
 
  
